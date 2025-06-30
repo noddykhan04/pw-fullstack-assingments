@@ -41,7 +41,101 @@ ANSWER OF QNO 1
 </body>
 </html>
 ---------------------------------------------------------------------------------------------------------------------------------------    
+ANSWER OF QNO 2
+<style>
+        .container{
+            display: grid;
+            text-align: center;
+            font-size: xx-large;
+            border: 2px solid black;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,1fr);
+        }
+        #A{
+            border: 2px solid blueviolet;
+            background-color: aqua;
+            grid-column: 1/3;
+            grid-row: 1/1;
+        }
+        #B{
+            border: 2px solid blueviolet;
+            background-color: aqua;
+            grid-column: 3/3;
+            grid-row: 1/3;
+        }
+        #C{
+            border: 2px solid blueviolet;
+            background-color: aqua;
+            
+        }
+        #D{
+            border: 2px solid blueviolet;
+            background-color: aqua;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="A"> A</div>
+        <div id="B"> B</div>
+        <div id="C"> C</div>
+        <div id="D"> D</div>
+    </div>
+</body>
+</html>
+--------------------------------------------------------------------------------------------------------------------------------------- 
+ANSWER OF QNO 3
 
+The `grid-auto-rows` and `grid-auto-columns` properties in CSS Grid are used to define the size of **implicitly created grid tracks**—that is, rows or columns that are automatically added by the browser when items are placed outside the explicitly defined grid.
+
+When you define a grid layout using `grid-template-rows` or `grid-template-columns`, you specify how many rows or columns you expect. However, if a grid item ends up in a row or column that hasn’t been defined (for example, by using `grid-row: 5` when only 2 rows were declared), the browser will create that row or column automatically. This is where `grid-auto-rows` and `grid-auto-columns` come into play—they set the size for these automatically generated tracks.
+
+For instance, if you use `grid-auto-rows: 100px;`, any new row added implicitly will be 100 pixels high. Similarly, `grid-auto-columns: 150px;` ensures that any new column created automatically will be 150 pixels wide.
+
+Here’s a simple example:
+Suppose you define a grid with only one column using `grid-template-columns: 100px;`, but then place three items without defining rows. If you use `grid-auto-rows: 80px;`, the browser will create additional rows of 80 pixels height to accommodate those items. This gives you control over how extra grid areas behave, preventing unexpected layout issues and maintaining a consistent design structure.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Auto Example</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: 100px;      /* Only one explicit column */
+      grid-auto-rows: 80px;              /* Height for implicit rows */
+      grid-auto-columns: 150px;          /* Width for implicit columns if needed */
+      gap: 10px;
+      border: 2px solid #333;
+    }
+
+    .grid-item {
+      background-color: lightblue;
+      border: 1px solid #000;
+      text-align: center;
+      font-size: 20px;
+      padding: 10px;
+    }
+
+    .item3 {
+      grid-column: 2; /* Triggers an implicit column */
+    }
+  </style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="grid-item">Item 1</div>
+  <div class="grid-item">Item 2</div>
+  <div class="grid-item item3">Item 3</div> <!-- Triggers auto-column -->
+</div>
+
+</body>
+</html>
+
+--------------------------------------------------------------------------------------------------------------------------------------- 
 ANSWER OF QNO 4
 <!DOCTYPE html>
 <html lang="en">
@@ -113,7 +207,7 @@ ANSWER OF QNO 4
     </div>
 </body>
 </html>
-
+--------------------------------------------------------------------------------------------------------------------------------------- 
 ANSWER OF QNO 5
 The properties `justify-items` and `justify-self` in CSS Grid are used to control horizontal alignment of grid items, but they differ in how and where they are applied.
 
