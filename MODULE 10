@@ -1,4 +1,46 @@
+ANSWER OF QNO 1
+<style>
+        .gallery {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+        gap: 10px;
+                }
+        .gallery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        }
 
+        .img1{
+            grid-column: 1/3;
+        }
+
+        .img3{
+            grid-row: 2/4;
+        }
+        .img5{
+                grid-column: 3/3;
+                grid-row: 2/4;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="gallery">
+  <img class="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoXHl2UjmAvokNGaiP4ujpBO_InZnXqdJb1Q&s" alt="Image 1">
+  <img class="img2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXXhFYF9X5JsAaOhlezPG6aDInO99cz0g5_A&s" alt="Image 2">
+  <img class="img3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuqPvkBi-vJ79ZQYwNZ9mvXoeGR_uoi1I_Fw&s" alt="Image 3">
+  <img class="img4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBNwEjbRywN_IPzgo7lot7AE73OTkpGiYyZA&s" alt="Image 4">
+  <img class="img5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFp9CeBHgEatoU3-Nee4_GxhR7irES7KTWEg&simage 5" alt="">
+  <img class="img6" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVeIGcabc2wHibK2hH7HaI2vNbZtPoEuLgVA&s" alt="image 6">
+</div>
+
+</body>
+</html>
+---------------------------------------------------------------------------------------------------------------------------------------    
 
 ANSWER OF QNO 5
 <!DOCTYPE html>
