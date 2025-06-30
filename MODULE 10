@@ -42,7 +42,7 @@ ANSWER OF QNO 1
 </html>
 ---------------------------------------------------------------------------------------------------------------------------------------    
 
-ANSWER OF QNO 5
+ANSWER OF QNO 4
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -113,3 +113,40 @@ ANSWER OF QNO 5
     </div>
 </body>
 </html>
+
+ANSWER OF QNO 5
+The properties `justify-items` and `justify-self` in CSS Grid are used to control horizontal alignment of grid items, but they differ in how and where they are applied.
+
+The `justify-items` property is applied to the **grid container** and affects **all the child items** inside the grid. It defines how the content of each item is aligned horizontally within its grid cell. For example, if you set `justify-items: center;` on the grid container, all the items will be centered horizontally inside their respective grid cells. Other possible values include `start`, `end`, and `stretch`.
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  justify-items: center; /* centers all items horizontally */
+  border: 2px solid #333;
+}
+
+.item {
+  background-color: lightblue;
+  padding: 10px;
+}
+
+On the other hand, `justify-self` is used on **individual grid items** to control their **own horizontal alignment** inside their cell. It overrides any `justify-items` setting from the container for that specific item. For instance, if you want one item to align to the right while others stay centered, you can apply `justify-self: end;` to just that item.
+
+In summary, `justify-items` is used for **global alignment** of all items within a grid container, while `justify-self` allows for **fine-tuned, item-specific alignment**. Both are useful for controlling layout behavior in CSS Grid depending on whether you want uniform or custom alignment.
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 100px;
+}
+
+.item {
+  background-color: lightgreen;
+  padding: 10px;
+}
+
+.item1 {
+  justify-self: start;  /* aligns to left inside its cell */
+}
+
+.item2 {
+  justify-self: end;    /* aligns to right inside its cell */
+}
